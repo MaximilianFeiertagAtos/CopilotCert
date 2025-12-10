@@ -1,3 +1,10 @@
+.highlight-new {
+  background: #fffbe6;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px #ffe082;
+  font-weight: bold;
+  transition: background 0.3s, box-shadow 0.3s;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -158,11 +165,49 @@ footer {
 }
 
 .participants-list {
-  margin-left: 18px;
+  margin-left: 0;
   margin-bottom: 0;
   color: #333;
   font-size: 15px;
-  list-style-type: disc;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.no-bullets {
+  list-style: none;
+  padding-left: 0;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-participant {
+  background: none;
+  border: none;
+  padding: 0 2px;
+  margin-left: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #c00;
+  transition: color 0.2s;
+}
+.delete-participant svg {
+  display: inline-block;
+  vertical-align: middle;
+  stroke: #c00;
+  transition: stroke 0.2s;
+}
+.delete-participant:hover,
+.delete-participant:focus {
+  color: #f00;
+}
+.delete-participant:hover svg,
+.delete-participant:focus svg {
+  stroke: #f00;
 }
 
 .no-participants {
